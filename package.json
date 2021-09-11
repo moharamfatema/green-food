@@ -12,7 +12,9 @@
     "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "prop-types": "^15.7.2",
+    "react-router": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,6 +42,7 @@
     ]
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-router": "^5.2.1"
   }
 }
