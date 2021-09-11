@@ -1,12 +1,26 @@
 import{Container,Row,Col,Image} from 'react-bootstrap'
+import React from "react";
 
-function RecipePage (props) {
-    return (
+class RecipeParent extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        console.log(this.props);
+        return(
+            <RecipePage props = {this.props}/>
+        );
+    }
+}
+
+const RecipePage = ({label,image}) =>
+    (
         <Container fluid>
             <Row>
-                <Image src={props.image.large} fluid/>
+                <Image alt={label} src={image} fluid/>
             </Row>
         </Container>
     )
-}
-export default RecipePage;
+
+export default RecipeParent;
