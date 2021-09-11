@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.openRecipe{
+  background-image: url('./resources/flay-lay-scale-weights.jpg');
+  background-size: cover;
+  background-color: #198754;
+  background-blend-mode: lighten;
+  padding: 5%;
+}
+.openRecipe Row{
+  margin: 20px 0;
+  padding: 5%;
+}
