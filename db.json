@@ -8,11 +8,11 @@
   "hits": [
     {
       "recipe": {
-        "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_02cf8fcad91453c4bec0cb9c406efbfb",
+        "uri": "https://www.edamam.com/ontologies/edamam.owl#recipe_02cf8fcad91453c4bec0cb9c406efbfb",
         "label": "Alfredo Linguine",
         "image": "https://www.edamam.com/web-img/48d/48d22ced6e798f0f3857e1f66c3eb55e.jpg",
         "source": "Delish",
-        "url": "http://www.delish.com/cooking/recipe-ideas/recipes/a7922/alfredo-linguine-recipe/",
+        "url": "https://www.delish.com/cooking/recipe-ideas/recipes/a7922/alfredo-linguine-recipe/",
         "shareAs": "http://www.edamam.com/recipe/alfredo-linguine-02cf8fcad91453c4bec0cb9c406efbfb/alfredo",
         "yield": 4.0,
         "dietLabels": [
