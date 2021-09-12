@@ -5,6 +5,7 @@ import {BrouserRouter, Route, Link, Switch} from "react-router-dom";
 import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
 import SignUp from "./ProfileComponents/SignUp";
+import Login from "./ProfileComponents/Login";
 function App() {
 
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path='/signup'>
             <SignUp/>
+        </Route>
+        <Route path='/login'>
+            <Login/>
         </Route>
     </Switch>
 

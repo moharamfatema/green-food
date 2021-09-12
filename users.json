@@ -16,19 +16,9 @@
       "id": 2
     },
     {
-      "username": "",
-      "password": "",
-      "id": 3
-    },
-    {
       "username": "mmm",
       "password": "kkk",
       "id": 4
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 5
     },
     {
       "username": "retett",
@@ -54,21 +44,8 @@
       "username": "dfsfsdfsd",
       "password": "dfdssddfs",
       "id": 10
-    },
-    {
-      "username": "moharamfatema",
-      "password": "kFxP8EXMnB5mErJ",
-      "id": 11
-    },
-    {
-      "username": "moharamfatema",
-      "password": "dd",
-      "id": 12
-    },
-    {
-      "username": "moharamfatem",
-      "password": "kFxP8EXMnB5mErJ",
-      "id": 13
     }
+
+
   ]
 }
