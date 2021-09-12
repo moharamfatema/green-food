@@ -11,7 +11,11 @@ const Recipe = ({ recipe }) => {
   return (
     <div className="d-flex justify-content-around">
   <Card style={{ width: '18rem' }} className="card">
-    <Link to='/recipe' >
+    <Link to={
+      {pathname:'/recipe',
+       recipe:recipe
+      }
+    }>
       <Card.Img  variant="top" src={image} />
     </Link>
     <Card.Body>

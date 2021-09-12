@@ -1,16 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import Axios,{AxiosStatic } from 'axios';
-import { v4 as uuidv4 } from "uuid";
-import Recipe from "./components/Recipe";
 import Navigaton from "./components/Navigaton";
-import {InputGroup, FormControl,Button, Container, TabContainer,TabPane} from 'react-bootstrap'
-import { Tab, Tabs } from "react-bootstrap";
 import {BrouserRouter, Route, Link, Switch} from "react-router-dom";
 import Home from "./components/homepage";
-import RecipeParent from "./OpenRecipeComponents/RecipePage";
-
-// import SavedRecipes from './components/SavedRecipes'
+import RecipePage from "./OpenRecipeComponents/RecipePage";
 
 function App() {
 
@@ -20,6 +13,9 @@ function App() {
     <Switch>
         <Route exact path='/'  >
             <Home/>
+        </Route>
+        <Route path='/recipe'>
+            <RecipePage/>
         </Route>
     </Switch>
       {/*<Tab.Container defaultActiveKey="profile" id="tab" className="mb-3">

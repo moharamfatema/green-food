@@ -2,23 +2,14 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {Accordion, Button, Card, Col, Container, Image, ListGroup, ListGroupItem, Row, Table} from "react-bootstrap";
 import '../App.css'
-class RecipeParent extends React.Component{
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        console.log(this.props.recipe);
-        return(
-            <RecipePage recipe = {this.props.recipe}/>
-        );
-    }
+import {Link,useLocation} from "react-router-dom";
 
-}
-
-
-
-const RecipePage = ({recipe}) =>
-    (
+export default function RecipePage ()
+{
+    let location = useLocation();
+    let recipe = location.recipe.recipe;
+    console.log(recipe);
+    return(
         <Container  className='openRecipe'  fluid>
             <Row>
                 <Card border="success" bg='light' text='dark'>
@@ -105,5 +96,4 @@ const RecipePage = ({recipe}) =>
             </Row>
         </Container>
     )
-
-export default RecipeParent;
+}
