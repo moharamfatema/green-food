@@ -48,3 +48,8 @@
   margin: 20px 0;
   padding: 5%;
 }
+.recipes{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
