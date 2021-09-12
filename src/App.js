@@ -4,7 +4,7 @@ import Axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Recipe from "./components/Recipe";
 import Navigaton from "./components/Navigaton";
-import { Button, Container } from 'react-bootstrap'
+import { Button, Container } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
 import { Tab, Tabs } from "react-bootstrap";
 // import SavedRecipes from './components/SavedRecipes'
@@ -33,14 +33,12 @@ function App() {
     }
   };
 
-
   const onChange = (e) => setQuery(e.target.value);
 
   const onSubmit = (e) => {
     e.preventDefault();
     getData();
   };
-
 
   return (
     <div className="App">
@@ -66,22 +64,22 @@ function App() {
           </form>
           <Container className="recipes" fluid>
             {recipes !== [] &&
-              recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
+              recipes.map((recipe) => (
+                <Recipe key={uuidv4()} recipe={recipe} />
+              ))}
           </Container>
         </Tab>
-        <Tab eventKey="Saved" title="Saved" >
-        <div className="recipes">
+        <Tab eventKey="Saved" title="Saved">
+          <div className="recipes">
             {recipes !== [] &&
-              recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
+              recipes.map((recipe) => (
+                <Recipe key={uuidv4()} recipe={recipe} />
+              ))}
           </div>
         </Tab>
-        <Tab eventKey="Profile" title="Profile" >
-
-        </Tab>
+        <Tab eventKey="Profile" title="Profile"></Tab>
       </Tabs>
-
-
-    </div >
+    </div>
   );
 }
 
