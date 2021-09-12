@@ -17,7 +17,7 @@ function App() {
         <Route path='/recipe'>
             <RecipePage/>
         </Route>
-        <Route path='/profile'>
+        <Route path='/signup'>
             <SignUp/>
         </Route>
     </Switch>

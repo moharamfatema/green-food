@@ -1,11 +1,12 @@
-import {Button, Card, FloatingLabel, Form} from "react-bootstrap";
-import {useEffect, useState} from "react";
+import {Alert, Button, Card, FloatingLabel, Form} from "react-bootstrap";
+import {useEffect, useState,ReactDOM} from "react";
 import './style.css'
 
 export default function SignUp(){
     let [newUserName,setNewUserName] = useState('');
     let [newPassword,setNewPassword] = useState('');
-    let [existingUserArr ,setExistingUserArr] = useState([])
+    let [existingUserArr ,setExistingUserArr] = useState([]);
+    let [show,setShow] = useState(false);
 
     /*get the users data from the server and store it in array*/
     useEffect(()=>{
@@ -20,22 +21,29 @@ export default function SignUp(){
 
     const onUserNameChange = (e)=>{
         setNewUserName(e.target.value);
-        existingUserArr.map((user,i)=>{
-            /*check for matching existing username*/
-            if(user.username === newUserName){
-                //TODO:warning();
-            }
-        })
+
     }
     const onPasswordChange = (e)=>{
         setNewPassword(e.target.value)
     }
-
+    const onAlertClose = ()=>{setShow(false)}
     const onSubmit = (e)=>{
         e.preventDefault();
 
         if (!newUserName.trim() | !newPassword.trim()){
             alert("Please fill required fileds");
+            return;
+        }
+        let found = false;
+        existingUserArr.map((user,i)=>{
+            /*check for matching existing username*/
+
+            if(user.username === newUserName){
+                found = true;
+            }
+        })
+        if (found) {
+            setShow(true);
             return;
         }
 
@@ -58,7 +66,7 @@ export default function SignUp(){
             })
         setNewPassword('');
         setNewUserName('');
-        console.log(existingUserArr)
+        console.log(existingUserArr);
     }
 
     return(
@@ -67,16 +75,17 @@ export default function SignUp(){
                 <h1>Sign Up</h1>
                 <Form.Group controlId='newusername'>
                     <Form.Label>Enter a username</Form.Label>
-                    <Form.Control type='text' placeholder='Enter a username' onChange={onUserNameChange} value={newUserName}/>
-                    <Form.Text/>
+                    <Form.Control aria-required={true} type='text' placeholder='Enter a username' onChange={onUserNameChange} value={newUserName}/>
+                    <Form.Text id='usernamewarning'/>
                 </Form.Group>
                 <Form.Group controlId='newpassword'>
                     <Form.Label>Enter a password</Form.Label>
                     <Form.Control type="password" placeholder="Enter a password" onChange={onPasswordChange} value={newPassword} />
                     <Form.Text/>
                 </Form.Group>
-                    <Button type='submit' onClick={onSubmit} variant='success'>Submit</Button>
+                    <Button type='submit' onClick={onSubmit} variant='success'>Sign Up</Button>
             </Form>
+            <Alert variant='danger' dismissible show={show} onClose={onAlertClose}>'username unavailable'</Alert>
         </Card>
     )
 }
