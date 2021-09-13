@@ -7,6 +7,8 @@ export default function SignUp(){
     let [newPassword,setNewPassword] = useState('');
     let [existingUserArr ,setExistingUserArr] = useState([]);
     let [show,setShow] = useState(false);
+    let [newWeight,setNewWeight] = useState(0);
+
 
     /*get the users data from the server and store it in array*/
     useEffect(()=>{
@@ -18,6 +20,11 @@ export default function SignUp(){
                 console.log(existingUserArr)
             })
     },[])
+
+    const onWeightChange = (e)=>{
+        setNewWeight(e.target.value);
+
+    }
 
     const onUserNameChange = (e)=>{
         setNewUserName(e.target.value);
@@ -55,7 +62,11 @@ export default function SignUp(){
             body:JSON.stringify(
                 {
                     "username":newUserName,
-                    "password":newPassword
+                    "password":newPassword,
+                    "weight":[
+                            ['Date', 'Weight'],
+                            [Date(), newWeight]
+                    ]
                 }
             )
         })
@@ -81,6 +92,11 @@ export default function SignUp(){
                 <Form.Group controlId='newpassword'>
                     <Form.Label>Enter a password</Form.Label>
                     <Form.Control type="password" placeholder="Enter a password" onChange={onPasswordChange} value={newPassword} />
+                    <Form.Text/>
+                </Form.Group>
+                <Form.Group controlId='newweight'>
+                    <Form.Label>Enter your weight</Form.Label>
+                    <Form.Control type="number" placeholder="Enter your weight" onChange={onWeightChange} value={newWeight} />
                     <Form.Text/>
                 </Form.Group>
                     <Button type='submit' onClick={onSubmit} variant='success'>Sign Up</Button>

@@ -6,6 +6,7 @@ import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
 import SignUp from "./ProfileComponents/SignUp";
 import Login from "./ProfileComponents/Login";
+import Profile from "./ProfileComponents/Profile"
 function App() {
 
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path='/login'>
             <Login/>
+        </Route>
+        <Route path='/profile'>
+            <Profile/>
         </Route>
     </Switch>
 

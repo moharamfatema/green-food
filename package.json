@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
+    "react-google-charts": "^3.0.15",
     "react-router": "^5.2.1"
   }
 }
