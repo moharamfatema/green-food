@@ -10,7 +10,7 @@ function SavedButton() {
     useEffect(() => {
         const getDate = async () => {
             const tasksFromServer = await fetchRecipe()
-            setRecipes(tasksFromServer)
+            setSavedRecipes(tasksFromServer)
         }
 
         getDate()
