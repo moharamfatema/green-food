@@ -39,9 +39,7 @@
       "username": "fdff",
       "password": "ddddd",
       "id": 9,
-      "savedRecipes": {
-
-      }
+      "savedRecipes": {}
     },
     {
       "username": "dfsfsdfsd",
@@ -52,6 +50,45 @@
       "username": "nadarabea",
       "password": "999",
       "id": 11
+    },
+    {
+      "username": "neww",
+      "password": "neww",
+      "weight": [
+        [
+          "Date",
+          "Weight"
+        ],
+        [
+          "Mon Sep 13 2021 15:34:44 GMT+0200 (Eastern European Standard Time)",
+          5
+        ],
+        [
+          "Mon Sep 13 2021 15:44:10 GMT+0200 (Eastern European Standard Time)",
+          30
+        ],
+        [
+          "Mon Sep 13 2021 15:44:13 GMT+0200 (Eastern European Standard Time)",
+          30
+        ],
+        [
+          "Mon Sep 13 2021 15:49:27 GMT+0200 (Eastern European Standard Time)",
+          50
+        ],
+        [
+          "Mon Sep 13 2021 16:13:17 GMT+0200 (Eastern European Standard Time)",
+          0
+        ],
+        [
+          "Mon Sep 13 2021 16:17:21 GMT+0200 (Eastern European Standard Time)",
+          0
+        ],
+        [
+          "Mon Sep 13 2021 16:19:51 GMT+0200 (Eastern European Standard Time)",
+          50
+        ]
+      ],
+      "id": 12
     }
   ]
 }

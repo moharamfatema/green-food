@@ -1,5 +1,7 @@
 import {Alert, Button, Card, Form} from "react-bootstrap";
 import {useEffect, useState} from "react";
+import * as path from "path";
+import {Link} from "react-router-dom";
 
 
 export default function Login(){
@@ -9,7 +11,7 @@ export default function Login(){
     let [password,setPassword] = useState('');
     let [existingUserArr ,setExistingUserArr] = useState([]);
     let [showSuccessAlert,setShowsuccessalert] = useState(false);
-
+    let [currentUser,setCurrentUser] = useState({});
     /*get the users data from the server and store it in array*/
     useEffect(()=>{
         fetch('http://localhost:5000/users')
@@ -42,6 +44,7 @@ export default function Login(){
         setShowpasswordalert(false);
         setShowusernamealert(false);
         setShowsuccessalert(false);
+        setCurrentUser({});
 
         if (!username.trim() | !password.trim()){
             alert("Please fill required fields");
@@ -49,7 +52,7 @@ export default function Login(){
         }
 
         let found = false;
-        let currentUser,userIndex;
+        let userIndex;
         existingUserArr.map((user,i)=>{
             /*check for matching existing username*/
 
@@ -59,7 +62,7 @@ export default function Login(){
             }
         })
         if (found) {
-            currentUser = existingUserArr[userIndex];
+            setCurrentUser(existingUserArr[userIndex]);
             //console.log(currentUser.password)
             if(password === currentUser.password){
                 //successalert
@@ -90,7 +93,11 @@ export default function Login(){
             </Form>
             <Alert variant='danger' dismissible show={showusernamealert} onClose={onUsernameAlertClose}>'wrong username'</Alert>
             <Alert variant='danger' dismissible show={showpasswordalert} onClose={onPasswordAlertClose}>'wrong password'</Alert>
-            <Alert variant='success'  show={showSuccessAlert} >Success</Alert>
+            <Link to={
+                {pathname:'/profile',
+                    user:currentUser
+                }
+            }><Alert variant='success' show={showSuccessAlert}>Success! click to go to profile</Alert></Link>
 
         </Card>
     )

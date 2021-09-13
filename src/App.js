@@ -26,7 +26,9 @@ function App() {
             <Login/>
         </Route>
         <Route path='/profile'>
+
             <Profile/>
+
         </Route>
     </Switch>
 

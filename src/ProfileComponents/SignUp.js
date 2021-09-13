@@ -1,6 +1,7 @@
 import {Alert, Button, Card, FloatingLabel, Form} from "react-bootstrap";
 import {useEffect, useState,ReactDOM} from "react";
 import './style.css'
+import {Link} from "react-router-dom";
 
 export default function SignUp(){
     let [newUserName,setNewUserName] = useState('');
@@ -8,6 +9,8 @@ export default function SignUp(){
     let [existingUserArr ,setExistingUserArr] = useState([]);
     let [show,setShow] = useState(false);
     let [newWeight,setNewWeight] = useState(0);
+    let [showSuccessAlert,setShowsuccessalert] = useState(false);
+    let [currentUser,setCurrentUser] = useState({});
 
 
     /*get the users data from the server and store it in array*/
@@ -65,7 +68,7 @@ export default function SignUp(){
                     "password":newPassword,
                     "weight":[
                             ['Date', 'Weight'],
-                            [Date(), newWeight]
+                            [Date(), Number(newWeight)]
                     ]
                 }
             )
@@ -74,7 +77,9 @@ export default function SignUp(){
             .then(data=>{
                 console.log(data)
                 setExistingUserArr([...existingUserArr,data])
+                setCurrentUser(data);
             })
+        setShowsuccessalert(true);
         setNewPassword('');
         setNewUserName('');
         console.log(existingUserArr);
@@ -102,6 +107,12 @@ export default function SignUp(){
                     <Button type='submit' onClick={onSubmit} variant='success'>Sign Up</Button>
             </Form>
             <Alert variant='danger' dismissible show={show} onClose={onAlertClose}>'username unavailable'</Alert>
+            <Link to={
+                {pathname:'/profile',
+                    user:currentUser
+                }
+            }><Alert variant='success' show={showSuccessAlert}>Success! click to go to profile</Alert></Link>
+
         </Card>
     )
 }
