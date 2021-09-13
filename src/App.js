@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import Navigaton from "./components/Navigaton";
 import { Route, Switch} from "react-router-dom"; 
@@ -8,6 +8,8 @@ import SignUp from "./ProfileComponents/SignUp";
 import Login from "./ProfileComponents/Login";
 import Profile from "./ProfileComponents/Profile"
 function App() {
+    let [currentUser,setCurrentUser]=useState({});
+
 
   return (
     <div className="App">

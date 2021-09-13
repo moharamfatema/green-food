@@ -19,8 +19,7 @@ export default function Weight({props}){
                 height={'300px'}
                 chartType="Line"
                 loader={<div>Loading Weight Data</div>}
-                data={[['date', 'weight'],
-                    [Date(),50]]}
+                data={props}
                 options={{
                     title: 'Weight',
                     hAxis: {title: 'Year', titleTextStyle: {color: '#333'}},

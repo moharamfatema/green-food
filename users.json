@@ -1,57 +1,6 @@
 {
   "users": [
     {
-      "id": 0,
-      "username": "moharamfatema",
-      "password": "123456798"
-    },
-    {
-      "username": "someone",
-      "password": "password",
-      "id": 1
-    },
-    {
-      "username": "ddssd",
-      "password": "sddsds",
-      "id": 2
-    },
-    {
-      "username": "mmm",
-      "password": "kkk",
-      "id": 4
-    },
-    {
-      "username": "retett",
-      "password": "kFxP8EXMnB5mErJ",
-      "id": 6
-    },
-    {
-      "username": "ggg",
-      "password": "kFxP8EXMnB5mErJ",
-      "id": 7
-    },
-    {
-      "username": "dfsfsd",
-      "password": "ffff",
-      "id": 8
-    },
-    {
-      "username": "fdff",
-      "password": "ddddd",
-      "id": 9,
-      "savedRecipes": {}
-    },
-    {
-      "username": "dfsfsdfsd",
-      "password": "dfdssddfs",
-      "id": 10
-    },
-    {
-      "username": "nadarabea",
-      "password": "999",
-      "id": 11
-    },
-    {
       "username": "neww",
       "password": "neww",
       "weight": [
@@ -86,9 +35,40 @@
         [
           "Mon Sep 13 2021 16:19:51 GMT+0200 (Eastern European Standard Time)",
           50
+        ],
+        [
+          "Mon Sep 13 2021 20:34:43 GMT+0200 (Eastern European Standard Time)",
+          5
         ]
       ],
       "id": 12
+    },
+    {
+      "username": "nadarabea",
+      "password": "999",
+      "weight": [
+        [
+          "Date",
+          "Weight"
+        ],
+        [
+          "Mon Sep 13 2021 20:56:18 GMT+0200 (Eastern European Standard Time)",
+          40
+        ],
+        [
+          "Mon Sep 13 2021 20:56:25 GMT+0200 (Eastern European Standard Time)",
+          41
+        ],
+        [
+          "Mon Sep 13 2021 20:56:30 GMT+0200 (Eastern European Standard Time)",
+          40
+        ],
+        [
+          "Mon Sep 13 2021 20:56:34 GMT+0200 (Eastern European Standard Time)",
+          40.5
+        ]
+      ],
+      "id": 13
     }
   ]
 }

@@ -3,6 +3,7 @@ import {Chart} from "react-google-charts";
 import Weight from "./Weight";
 import {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
+import './style.css'
 
 
 export default function Profile(){
@@ -43,7 +44,7 @@ export default function Profile(){
 
     return(
         <Container>
-            <Card>
+            <Card className='profileCard'>
                 <Card.Header>Your Profile</Card.Header>
                 <Card.Body>
                     <Card.Text>

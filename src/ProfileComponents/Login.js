@@ -63,10 +63,12 @@ export default function Login(){
         })
         if (found) {
             setCurrentUser(existingUserArr[userIndex]);
-            //console.log(currentUser.password)
+            console.log(currentUser)
             if(password === currentUser.password){
                 //successalert
                 setShowsuccessalert(true);
+                setShowpasswordalert(false);
+                setShowusernamealert(false);
             }else {
                 setShowpasswordalert(true)
             }
@@ -90,7 +92,13 @@ export default function Login(){
                     <Form.Text/>
                 </Form.Group>
                 <Button type='submit' onClick={onSubmit} variant='primary'>Login</Button>
+                or
+                <br/>
+                <Link to='/signup'>
+                    <Button  variant='success'>Sign Up</Button>
+                </Link>
             </Form>
+
             <Alert variant='danger' dismissible show={showusernamealert} onClose={onUsernameAlertClose}>'wrong username'</Alert>
             <Alert variant='danger' dismissible show={showpasswordalert} onClose={onPasswordAlertClose}>'wrong password'</Alert>
             <Link to={
