@@ -9,9 +9,6 @@ import { Tab, Tabs } from "react-bootstrap";
 import {BrouserRouter, Route, Link, Switch} from "react-router-dom";
 import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
-import { Route, Switch} from "react-router-dom"; 
-import Home from "./components/homepage";
-import RecipePage from "./OpenRecipeComponents/RecipePage";
 import SignUp from "./ProfileComponents/SignUp";
 function App() {
 
