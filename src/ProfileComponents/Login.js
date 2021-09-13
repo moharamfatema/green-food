@@ -2,6 +2,7 @@ import {Alert, Button, Card, Form} from "react-bootstrap";
 import {useEffect, useState} from "react";
 import * as path from "path";
 import {Link} from "react-router-dom";
+import Profile from "./Profile";
 
 
 export default function Login(){
@@ -12,6 +13,8 @@ export default function Login(){
     let [existingUserArr ,setExistingUserArr] = useState([]);
     let [showSuccessAlert,setShowsuccessalert] = useState(false);
     let [currentUser,setCurrentUser] = useState({});
+
+
     /*get the users data from the server and store it in array*/
     useEffect(()=>{
         fetch('http://localhost:5000/users')
@@ -21,7 +24,12 @@ export default function Login(){
                 setExistingUserArr(data)
                 //console.log(existingUserArr)
             })
+
+
     },[])
+
+
+
 
     const onUserNameChange =(e)=>{
         setUsername(e.target.value);

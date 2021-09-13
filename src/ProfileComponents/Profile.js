@@ -9,7 +9,7 @@ import './style.css'
 export default function Profile(){
     const location= useLocation();
     const [currentUser,setCurrentUser] = useState(location.user);
-    let [updatedWeight,setUpdatedWeight] = useState(0);
+    let [updatedWeight,setUpdatedWeight] = useState(currentUser.weight[(currentUser.weight.length)-1][1]);
 
 
     const onWeightUpdate = (e)=>{

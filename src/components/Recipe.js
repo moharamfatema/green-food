@@ -25,7 +25,7 @@ const Recipe = ({ recipe }) => {
         Calories/serving= {Math.round(calories/recipe.recipe.yield)} <br />
         Meal: {mealType}
       </Card.Text>
-      <SavedButton />
+      {/*<SavedButton />*/}
     </Card.Body>
   </Card>
   </div>

@@ -22,7 +22,9 @@ const Navigaton = () => {
               <Link to="/">Home</Link>
             </Nav.Link>
 
+{/*
             <Nav.Link eventKey='saved' ><Link to="/saved">Saved</Link></Nav.Link>
+*/}
             <Nav.Link eventKey='profile' ><Link to='/login'>< i className="fas fa-user-circle"/></Link></Nav.Link>
           </Nav>
         </Container>

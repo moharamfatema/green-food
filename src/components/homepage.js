@@ -1,14 +1,14 @@
 import {Button, Container, FormControl, InputGroup, Tab} from "react-bootstrap";
 import Recipe from "./Recipe";
 import {v4 as uuidv4} from "uuid";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Axios from "axios";
 
 
 
 
 export default function Home(){
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("salad");
     const [recipes, setRecipes] = useState([]);
     const app_id = "4e9f05eb";
     const app_key = "9b904d703fa0d46a88ce1ac63f29f498";
@@ -26,6 +26,11 @@ export default function Home(){
             alert("Please, Fill this form!");
         }
     };
+
+    useEffect(()=>{
+        setQuery('salad')
+        getData()
+        },[]);
 
     const onSubmit = (e) => {
         e.preventDefault();

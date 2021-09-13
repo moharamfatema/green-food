@@ -8,7 +8,6 @@ import SignUp from "./ProfileComponents/SignUp";
 import Login from "./ProfileComponents/Login";
 import Profile from "./ProfileComponents/Profile"
 function App() {
-    let [currentUser,setCurrentUser]=useState({});
 
 
   return (
@@ -25,7 +24,7 @@ function App() {
             <SignUp/>
         </Route>
         <Route path='/login'>
-            <Login/>
+            <Login />
         </Route>
         <Route path='/profile'>
 
