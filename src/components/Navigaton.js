@@ -30,7 +30,7 @@ const Navigaton = () => {
       <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand >
-            <Link to='/home'><img
+            <Link to='/'><img
                 alt="logo"
                 src="https://www.logolynx.com/images/logolynx/s_6c/6c27ee419bb5f34aff0e0744900e8c71.jpeg"
                 width="30"
@@ -39,7 +39,7 @@ const Navigaton = () => {
             />HEALTHY FOOD</Link></Navbar.Brand>
           <Nav>
             <Nav.Link eventKey='home' >
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </Nav.Link>
 
             <Nav.Link eventKey='saved' ><Link to="/saved">Saved</Link></Nav.Link>
