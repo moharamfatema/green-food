@@ -1,5 +1,6 @@
 # recipe search - health tracker
-concepts:
+
+# concepts:
 
 -react & react hooks
 
@@ -8,3 +9,11 @@ concepts:
 -using fake REST API (json server) [create-read-update]
 
 -charting data using google charts
+
+# Team
+
+- Team Name: QWERTY
+- Members:
+-   Fatema Moharam
+-   Nada Rabea
+-   Hager Tawfik
