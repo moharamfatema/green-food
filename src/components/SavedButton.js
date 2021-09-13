@@ -1,10 +1,10 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 // import Data from 'db/json'
 
 function SavedButton() {
-    
-     const [recipes, setSavedRecipes] = useState([])
+
+    const [recipes, setSavedRecipes] = useState([])
 
 
     useEffect(() => {

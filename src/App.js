@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navigaton from "./components/Navigaton";
-<<<<<<< HEAD
 import { Button, Container } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
 import { Tab, Tabs } from "react-bootstrap";
 // import SavedRecipes from './components/SavedRecipes'
-=======
+
 import {BrouserRouter, Route, Link, Switch} from "react-router-dom";
 import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
->>>>>>> main
-
 function App() {
 
   return (
@@ -44,9 +41,7 @@ function App() {
                       autoComplete="off"
                   />
 
-<<<<<<< HEAD
   const onChange = (e) => setQuery(e.target.value);
-=======
                   <Button variant="outline-primary" id="search" type="submit">
                     <i class="fas fa-search"></i>
                   </Button>
@@ -61,13 +56,11 @@ function App() {
           <Route>
             <Tab.Pane eventKey="Saved" title="Saved">
 
->>>>>>> main
 
             </Tab.Pane>
           </Route>
         </Switch></Tab.Content>
 
-<<<<<<< HEAD
   return (
     <div className="App">
       <Navigaton />
@@ -108,7 +101,6 @@ function App() {
         <Tab eventKey="Profile" title="Profile"></Tab>
       </Tabs>
     </div>
-=======
         <Tab eventKey="Saved" title="Saved" >
 
 
@@ -119,7 +111,6 @@ function App() {
 
 
     </div >
->>>>>>> main
   );
 }
 
