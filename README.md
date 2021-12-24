@@ -9,13 +9,13 @@
 
 ## Screenshots
 - homepage
-    ![home](screenshots\home-desktop.png)
+    ![home](/screenshots/home-desktop.png)
 - Recipe
-    ![Recipe](screenshots\recipe-desktop.png)
+    ![Recipe](/screenshots/recipe-desktop.png)
 - Sign up
-    ![signup](screenshots\signup-desktop.png)
+    ![signup](/screenshots/signup-desktop.png)
 - Log in
-    ![login](screenshots\login-desktop.png)
+    ![login](/screenshots/login-desktop.png)
 - Profile
-    ![Profile](screenshots\profile-desktop.png)
+    ![Profile](/screenshots/profile-desktop.png)
  
