@@ -73,6 +73,88 @@
         ]
       ],
       "id": 13
+    },
+    {
+      "username": "username",
+      "password": "48VFgzmPmxcwb7L",
+      "weight": [
+        [
+          "Date",
+          "Weight"
+        ],
+        [
+          "Tue Sep 14 2021 12:13:09 GMT+0200 (Eastern European Standard Time)",
+          50
+        ],
+        [
+          "Tue Sep 14 2021 12:13:36 GMT+0200 (Eastern European Standard Time)",
+          58
+        ],
+        [
+          "Tue Sep 14 2021 12:13:40 GMT+0200 (Eastern European Standard Time)",
+          53
+        ],
+        [
+          "Tue Sep 14 2021 12:24:16 GMT+0200 (Eastern European Standard Time)",
+          53
+        ]
+      ],
+      "id": 14
+    },
+    {
+      "username": "maggie103",
+      "password": "ddggfgdggfdfgd",
+      "weight": [
+        [
+          "Date",
+          "Weight"
+        ],
+        [
+          "Fri Dec 24 2021 02:10:30 GMT+0200 (Eastern European Standard Time)",
+          63
+        ],
+        [
+          "Fri Dec 24 2021 02:10:45 GMT+0200 (Eastern European Standard Time)",
+          68.9
+        ],
+        [
+          "Fri Dec 24 2021 02:10:51 GMT+0200 (Eastern European Standard Time)",
+          67
+        ],
+        [
+          "Fri Dec 24 2021 02:11:03 GMT+0200 (Eastern European Standard Time)",
+          65
+        ],
+        [
+          "Fri Dec 24 2021 02:11:08 GMT+0200 (Eastern European Standard Time)",
+          65.2
+        ],
+        [
+          "Fri Dec 24 2021 02:11:15 GMT+0200 (Eastern European Standard Time)",
+          64.7
+        ],
+        [
+          "Fri Dec 24 2021 02:11:26 GMT+0200 (Eastern European Standard Time)",
+          64.9
+        ],
+        [
+          "Fri Dec 24 2021 02:11:29 GMT+0200 (Eastern European Standard Time)",
+          63
+        ],
+        [
+          "Fri Dec 24 2021 02:11:33 GMT+0200 (Eastern European Standard Time)",
+          63.5
+        ],
+        [
+          "Fri Dec 24 2021 02:11:37 GMT+0200 (Eastern European Standard Time)",
+          63.2
+        ],
+        [
+          "Fri Dec 24 2021 02:11:43 GMT+0200 (Eastern European Standard Time)",
+          62
+        ]
+      ],
+      "id": 15
     }
   ]
 }
