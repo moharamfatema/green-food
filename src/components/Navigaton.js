@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Container, Navbar } from "react-bootstrap";
-import {BrowserRouter,Switch,Link,Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const Navigaton = () => {

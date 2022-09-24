@@ -1,14 +1,12 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import {Accordion, Button, Card, Col, Container, Image, ListGroup, ListGroupItem, Row, Table} from "react-bootstrap";
+import {Accordion, Button, Card, Container, ListGroup, Row, Table} from "react-bootstrap";
 import '../App.css'
-import {Link,useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 export default function RecipePage ()
 {
     let location = useLocation();
     let recipe = location.recipe.recipe;
-    console.log(recipe);
     return(
         <Container  className='openRecipe'  fluid>
             <Row>

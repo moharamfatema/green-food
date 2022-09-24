@@ -1,8 +1,6 @@
 import {Alert, Button, Card, Form} from "react-bootstrap";
 import {useEffect, useState} from "react";
-import * as path from "path";
 import {Link} from "react-router-dom";
-import Profile from "./Profile";
 
 
 export default function Login(){
@@ -20,9 +18,7 @@ export default function Login(){
         fetch('http://localhost:5000/users')
             .then(response=>response.json())
             .then(data=>{
-                //console.log(data)
                 setExistingUserArr(data)
-                //console.log(existingUserArr)
             })
 
 
@@ -61,7 +57,7 @@ export default function Login(){
 
         let found = false;
         let userIndex;
-        existingUserArr.map((user,i)=>{
+        existingUserArr.forEach((user,i)=>{
             /*check for matching existing username*/
 
             if(user.username === username){
@@ -71,7 +67,6 @@ export default function Login(){
         })
         if (found) {
             setCurrentUser(existingUserArr[userIndex]);
-            console.log(currentUser)
             if(password === currentUser.password){
                 //successalert
                 setShowsuccessalert(true);

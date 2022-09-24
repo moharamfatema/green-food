@@ -1,7 +1,6 @@
 import {Button, Card, Container, Form} from "react-bootstrap";
-import {Chart} from "react-google-charts";
 import Weight from "./Weight";
-import {useEffect, useState} from "react";
+import { useState} from "react";
 import {useLocation} from "react-router-dom";
 import './style.css'
 
@@ -34,13 +33,10 @@ export default function Profile(){
         }
         ).then(response => response.json())
             .then(data => {
-                console.log(data);
                 setCurrentUser(data);
             })
 
     }
-
-    console.log(location.user);
 
     return(
         <Container>

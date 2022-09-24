@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 import Navigaton from "./components/Navigaton";
-import { Route, Switch} from "react-router-dom"; 
+import { Route, Switch} from "react-router-dom";
 import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
 import SignUp from "./ProfileComponents/SignUp";

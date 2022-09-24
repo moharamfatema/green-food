@@ -1,4 +1,4 @@
-import {Button, Container, FormControl, InputGroup, Tab} from "react-bootstrap";
+import {Button, Container, FormControl, InputGroup} from "react-bootstrap";
 import Recipe from "./Recipe";
 import {v4 as uuidv4} from "uuid";
 import React, {useEffect, useState} from "react";
@@ -19,7 +19,6 @@ export default function Home(){
             if (!result.data.more) {
                 return alert("No food with such name");
             }
-            console.log(result);
             setRecipes(result.data.hits);
             setQuery("");
         } else {

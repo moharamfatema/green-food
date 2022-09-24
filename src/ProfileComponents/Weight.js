@@ -6,7 +6,6 @@ export default function Weight({props}){
 
 
 
-    console.log(props)
     let currentWeight = props[(props.length)-1][1];
 
 

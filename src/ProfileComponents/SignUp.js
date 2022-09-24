@@ -1,5 +1,5 @@
-import {Alert, Button, Card, FloatingLabel, Form} from "react-bootstrap";
-import {useEffect, useState,ReactDOM} from "react";
+import {Alert, Button, Card, Form} from "react-bootstrap";
+import {useEffect, useState} from "react";
 import './style.css'
 import {Link} from "react-router-dom";
 
@@ -18,9 +18,7 @@ export default function SignUp(){
         fetch('http://localhost:5000/users')
             .then(response=>response.json())
             .then(data=>{
-                console.log(data)
                 setExistingUserArr(data)
-                console.log(existingUserArr)
             })
     },[])
 
@@ -45,7 +43,7 @@ export default function SignUp(){
             return;
         }
         let found = false;
-        existingUserArr.map((user,i)=>{
+        existingUserArr.forEach((user,i)=>{
             /*check for matching existing username*/
 
             if(user.username === newUserName){
@@ -75,14 +73,12 @@ export default function SignUp(){
         })
             .then(response=>response.json())
             .then(data=>{
-                console.log(data)
                 setExistingUserArr([...existingUserArr,data])
                 setCurrentUser(data);
             })
         setShowsuccessalert(true);
         setNewPassword('');
         setNewUserName('');
-        console.log(existingUserArr);
     }
 
     return(
