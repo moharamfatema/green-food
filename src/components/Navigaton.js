@@ -18,14 +18,10 @@ const Navigaton = () => {
                 className="d-inline-block align-top"
             />HEALTHY FOOD</Link></Navbar.Brand>
           <Nav>
-            <Nav.Link eventKey='home' >
+            <Nav.Item >
               <Link to="/">Home</Link>
-            </Nav.Link>
-
-{/*
-            <Nav.Link eventKey='saved' ><Link to="/saved">Saved</Link></Nav.Link>
-*/}
-            <Nav.Link eventKey='profile' ><Link to='/login'>< i className="fas fa-user-circle"/></Link></Nav.Link>
+            </Nav.Item>
+            <Nav.Item ><Link to='/login'>< i className="fas fa-user-circle"/></Link></Nav.Item>
           </Nav>
         </Container>
       </Navbar>

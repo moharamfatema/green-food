@@ -11,10 +11,9 @@ const Recipe = ({ recipe }) => {
     <div className="d-flex justify-content-around">
   <Card style={{ width: '18rem' }} className="card">
     <Link to={
-      {pathname:'/recipe',
-       recipe:recipe
-      }
-    }>
+      {pathname:'/recipe'}}
+      state={recipe}
+    >
       <Card.Img  variant="top" src={image} />
     </Link>
     <Card.Body>
@@ -24,7 +23,6 @@ const Recipe = ({ recipe }) => {
         Calories/serving= {Math.round(calories/recipe.recipe.yield)} <br />
         Meal: {mealType}
       </Card.Text>
-      {/*<SavedButton />*/}
     </Card.Body>
   </Card>
   </div>

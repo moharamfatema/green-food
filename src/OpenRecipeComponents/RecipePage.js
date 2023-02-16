@@ -6,7 +6,8 @@ import {useLocation} from "react-router-dom";
 export default function RecipePage ()
 {
     let location = useLocation();
-    let recipe = location.recipe.recipe;
+    console.log(location)
+    let recipe = location.state.recipe;
     return(
         <Container  className='openRecipe'  fluid>
             <Row>

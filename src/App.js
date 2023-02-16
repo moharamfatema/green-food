@@ -1,39 +1,28 @@
 import React from "react";
 import "./App.css";
 import Navigaton from "./components/Navigaton";
-import { Route, Switch} from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./components/homepage";
 import RecipePage from "./OpenRecipeComponents/RecipePage";
 import SignUp from "./ProfileComponents/SignUp";
 import Login from "./ProfileComponents/Login";
-import Profile from "./ProfileComponents/Profile"
+import Profile from "./ProfileComponents/Profile";
+
 function App() {
-
-
   return (
     <div className="App">
-    <Navigaton />
-    <Switch>
-        <Route exact path='/'  >
-            <Home/>
-        </Route>
-        <Route path='/recipe'>
-            <RecipePage/>
-        </Route>
-        <Route path='/signup'>
-            <SignUp/>
-        </Route>
-        <Route path='/login'>
-            <Login />
-        </Route>
-        <Route path='/profile'>
-
-            <Profile/>
-
-        </Route>
-    </Switch>
-
-    </div >
+      <BrowserRouter basename="/green-food">
+        <Navigaton />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/recipe" element={<RecipePage/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

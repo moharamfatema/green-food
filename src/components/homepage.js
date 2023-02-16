@@ -1,7 +1,7 @@
 import {Button, Container, FormControl, InputGroup} from "react-bootstrap";
 import Recipe from "./Recipe";
 import {v4 as uuidv4} from "uuid";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import Axios from "axios";
 
 
@@ -13,7 +13,7 @@ export default function Home(){
     const app_id = "4e9f05eb";
     const app_key = "9b904d703fa0d46a88ce1ac63f29f498";
     const url = `https://api.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&calories=10-500`;
-    const getData = async () => {
+    const getData = useCallback(async () => {
         if (query !== "") {
             const result = await Axios.get(url);
             if (!result.data.more) {
@@ -24,23 +24,24 @@ export default function Home(){
         } else {
             alert("Please, Fill this form!");
         }
-    };
+    },[query, url]);
 
     useEffect(()=>{
         setQuery('salad')
-        getData()
-        },[]);
+        document.querySelector('#search').click()
+    },[])
 
     const onSubmit = (e) => {
         e.preventDefault();
         getData();
+        setQuery("");
     };
     const onChange = (e) => setQuery(e.target.value);
 
     return(
         <>
             <h1>Recipes</h1>
-            <form onSubmit={onSubmit} className="search-form">
+            <form onSubmit={onSubmit} className="search-form" id="form">
                 <InputGroup className="mb-3">
                     <FormControl
                         placeholder="Search"
@@ -51,7 +52,7 @@ export default function Home(){
                         autoComplete="off"
                     />
                     <Button variant="outline-primary" id="search" type="submit">
-                        <i class="fas fa-search"></i>
+                        <i className="fas fa-search"></i>
                     </Button>
                 </InputGroup>
             </form>
