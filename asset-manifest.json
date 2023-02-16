@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/green-food/static/css/main.2d2babc0.chunk.css",
+    "main.js": "/green-food/static/js/main.c10f7fdc.chunk.js",
+    "main.js.map": "/green-food/static/js/main.c10f7fdc.chunk.js.map",
+    "runtime-main.js": "/green-food/static/js/runtime-main.6c10ec0f.js",
+    "runtime-main.js.map": "/green-food/static/js/runtime-main.6c10ec0f.js.map",
+    "static/js/2.ef06351c.chunk.js": "/green-food/static/js/2.ef06351c.chunk.js",
+    "static/js/2.ef06351c.chunk.js.map": "/green-food/static/js/2.ef06351c.chunk.js.map",
+    "static/js/3.3095da8a.chunk.js": "/green-food/static/js/3.3095da8a.chunk.js",
+    "static/js/3.3095da8a.chunk.js.map": "/green-food/static/js/3.3095da8a.chunk.js.map",
+    "index.html": "/green-food/index.html",
+    "static/css/main.2d2babc0.chunk.css.map": "/green-food/static/css/main.2d2babc0.chunk.css.map",
+    "static/js/2.ef06351c.chunk.js.LICENSE.txt": "/green-food/static/js/2.ef06351c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/green-food/static/media/flay-lay-scale-weights.0530d709.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c10ec0f.js",
+    "static/js/2.ef06351c.chunk.js",
+    "static/css/main.2d2babc0.chunk.css",
+    "static/js/main.c10f7fdc.chunk.js"
+  ]
+}
